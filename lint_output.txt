@@ -1,0 +1,70 @@
+
+> jinjiang-tools@0.1.0 lint
+> eslint
+
+
+D:\Code\WebProjects\JinJiangTools\jinjiang-tools\src\app\tools\pdf-merge\page.tsx
+    3:27  warning  'useCallback' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+    6:10  warning  'Card' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+    7:28  warning  'Move' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+    7:34  warning  'Plus' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   11:8   warning  'clsx' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  207:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+D:\Code\WebProjects\JinJiangTools\jinjiang-tools\src\components\ui\FileUpload.tsx
+   7:10  warning  'Button' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+  53:36  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `validateFiles`, but the source dependencies were [onFilesSelected, accept, maxSize]. Inferred different dependency than source.
+
+D:\Code\WebProjects\JinJiangTools\jinjiang-tools\src\components\ui\FileUpload.tsx:53:36
+  51 |     };
+  52 |
+> 53 |     const handleDrop = useCallback((e: React.DragEvent) => {
+     |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 54 |         e.preventDefault();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 55 |         setIsDragging(false);
+     鈥?     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 62 |         }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |     }, [onFilesSelected, accept, maxSize]);
+     | ^^^^^^ Could not preserve existing manual memoization
+  64 |
+  65 |     const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  66 |         if (e.target.files) {                                                                                                                                                                                                                                                                                                                                                                                                                                                           react-hooks/preserve-manual-memoization
+  63:8   warning  React Hook useCallback has a missing dependency: 'validateFiles'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/exhaustive-deps
+  65:41  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `validateFiles`, but the source dependencies were [onFilesSelected, accept, maxSize]. Inferred different dependency than source.
+
+D:\Code\WebProjects\JinJiangTools\jinjiang-tools\src\components\ui\FileUpload.tsx:65:41
+  63 |     }, [onFilesSelected, accept, maxSize]);
+  64 |
+> 65 |     const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+     |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 66 |         if (e.target.files) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 67 |             const selectedFiles = Array.from(e.target.files);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 68 |             const validFiles = validateFiles(selectedFiles);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 70 |             if (validFiles.length > 0) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 71 |                 onFilesSelected(validFiles);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 72 |             }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 73 |         }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 74 |     }, [onFilesSelected, accept, maxSize]);
+     | ^^^^^^ Could not preserve existing manual memoization
+  75 |
+  76 |     return (
+  77 |         <div className={styles.container}>  react-hooks/preserve-manual-memoization
+  74:8   warning  React Hook useCallback has a missing dependency: 'validateFiles'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/exhaustive-deps
+
+鉁?11 problems (2 errors, 9 warnings)
+

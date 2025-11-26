@@ -1,0 +1,26 @@
+
+> jinjiang-tools@0.1.0 build
+> next build
+
+   鈻?Next.js 16.0.3 (Turbopack)
+
+   Creating an optimized production build ...
+ 鉁?Compiled successfully in 3.1s
+   Running TypeScript ...
+   Collecting page data using 11 workers ...
+   Generating static pages using 11 workers (0/6) ...
+Warning: Please use the `legacy` build in Node.js environments.
+Error occurred prerendering page "/tools/pdf-compress". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: DOMMatrix is not defined
+    at module evaluation (D:\Code\WebProjects\JinJiangTools\jinjiang-tools\.next\server\chunks\ssr\_ad316121._.js:2:126776)
+    at instantiateModule (D:\Code\WebProjects\JinJiangTools\jinjiang-tools\.next\server\chunks\ssr\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (D:\Code\WebProjects\JinJiangTools\jinjiang-tools\.next\server\chunks\ssr\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (D:\Code\WebProjects\JinJiangTools\jinjiang-tools\.next\server\chunks\ssr\[turbopack]_runtime.js:228:20)
+    at module evaluation (D:\Code\WebProjects\JinJiangTools\jinjiang-tools\.next\server\chunks\ssr\src_1af99190._.js:1:1896)
+    at instantiateModule (D:\Code\WebProjects\JinJiangTools\jinjiang-tools\.next\server\chunks\ssr\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (D:\Code\WebProjects\JinJiangTools\jinjiang-tools\.next\server\chunks\ssr\[turbopack]_runtime.js:738:12)
+    at Context.commonJsRequire [as r] (D:\Code\WebProjects\JinJiangTools\jinjiang-tools\.next\server\chunks\ssr\[turbopack]_runtime.js:249:12) {
+  digest: '2807190657'
+}
+Export encountered an error on /tools/pdf-compress/page: /tools/pdf-compress, exiting the build.
+ 猕?Next.js build worker exited with code: 1 and signal: null
